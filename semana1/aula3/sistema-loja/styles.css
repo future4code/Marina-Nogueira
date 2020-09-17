@@ -26,39 +26,39 @@ a:hover {
 }
 
 #h1-boas-vindas {
-    font-size: 30px;
+    font-size: 35px;
     color:white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #p-boas-vindas {
-    font-size: 25px;
+    font-size: 30px;
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }    
 
 #infos-loja {
-    background-color: #f7b733;
+    background-color: #dfdce3;
     }
 
 #p-infos-loja {
-    font-size: 15px;
-    color: white;
+    font-size: 20px;
+    color: black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
 }
 
 .redes-sociais-logos {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 70px;
+    max-height: 70px;
 }
 
 .redes-sociais {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bolder;
-    background-color: violet;
+    color: white;
 }
 
 .rodape {
@@ -103,3 +103,17 @@ a:hover {
     width: auto;
     height: auto;
 }
+
+#link-historico {
+    background-color: #4abdac
+}
+
+#a-link-historico {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px 10px;
+    display: inline-block;
+ }
+
