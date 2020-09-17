@@ -1,0 +1,105 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu {
+    background-color: #4abdac;
+    
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px 50px;
+    display: inline-block;
+}
+
+a:hover {
+    color: #dfdce3;
+}
+
+#boas-vindas {
+    background-color: #f7b733;
+    text-align: center;
+}
+
+#h1-boas-vindas {
+    font-size: 30px;
+    color:white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#p-boas-vindas {
+    font-size: 25px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}    
+
+#infos-loja {
+    background-color: #f7b733;
+    }
+
+#p-infos-loja {
+    font-size: 15px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.redes-sociais-logos {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.redes-sociais {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: violet;
+}
+
+.rodape {
+    background-color: #fc4a1a;
+    text-align: center;
+    position: fixed;
+    display: block;
+    width: 100vw;
+    bottom: 0px;
+}
+
+#ctrl-rodape {
+    background-color: #fc4a1a;
+    text-align: center;
+    display: block;
+    width: 100vw;
+}
+
+.p-rodape {
+    display: inline-block;
+    padding: 15px 0px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.p-titulo-pgs-secundarias {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
+
+.titulo-pgs-secundarias {
+    background-color: #f7b733;
+}
+
+.img-estoque {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
