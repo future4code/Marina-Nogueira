@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Noto Serif', serif;
+}
+
+.header {
+    background-color:#f0d06b;
+    height: 100px;
+}
+
+h1 {
+    margin: 0 30px 20px 30px;
+    text-align: center;
+    color: #bf2742
+}
+
+.menu {
+    margin: 10px 0;
+}
+
+.menu a {
+    color: #bf2742;
+    border: 1px solid #bf2742;
+    padding: 10px;
+    margin: 10px;
+}
+
+#selected {
+    color: #577c80;
+    border: 2px solid #577c80;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    background-color: #577c80;
+}
+
+h2 {
+    margin: 20px;
+}
+
+#profile-picture {
+    height: 250px;
+    margin-left: 20px;
+}
+
+#p-sobre {
+    margin: 20px;
+}
+
+h3 {
+    margin-left: 20px;
+}
+
+p {
+    margin: 20px;
+}
+
+.img-projetos {
+    height: 200px;
+}
+
+img {
+    margin-left: 20px;
+}
+
+form {
+    margin-left: 20px;
+}
+
+button {
+    background-color:#501e31;
+    border: 2px solid #501e31;
+    border-radius: 15px;
+    height: 30px;
+    width: 60px;
+    margin: 30px;
+}
+
+#footer-home {
+    background-color: #d95a40;
+    text-align: center;
+    display: block;
+    width: 100vw;  
+}
+
+.footer {
+    background-color: #d95a40;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+}
+
+.footer a {
+    color: #bf2742;
+}
+
