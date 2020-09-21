@@ -114,6 +114,14 @@ td button {
     color: black;
 }
 
+button:active {
+    color: white;
+}
+
+button:hover {
+    background-color: #d6be53c4;
+}
+
 img {
     width: auto;
     height: auto;
