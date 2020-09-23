@@ -90,23 +90,33 @@ div {
 
 @media screen and (min-device-width: 421px) and (max-device-width: 800px) {
     #blocos1 {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        border: none;
-        margin: 0.5em;
-        gap: 1em;
     }
-    .green-block {
-        width: 100vw;
+    
+    #blocos2 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
-    #blocos2 {
-        display: grid;
+    .green-block {
+        grid-column: 1/3;
+    }
+
+    #blocos4 {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        border: none;
-        margin: 0.5em;
-        gap: 1em;
+    }
+
+    #white-block-11 {
+        grid-column: 1/3;
     }
 }
+   
+
+@media screen and (min-device-width: 320px) and (max-device-width: 420px) {
+   div#main-container {
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   }
+    }
