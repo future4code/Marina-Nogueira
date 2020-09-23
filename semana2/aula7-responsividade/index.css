@@ -115,8 +115,27 @@ div {
    
 
 @media screen and (min-device-width: 320px) and (max-device-width: 420px) {
-   div#main-container {
-       grid-template-columns: 1fr;
-       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-   }
+    #blocos1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3 1fr);
     }
+    
+    #blocos2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3 1fr);
+    }
+    
+    #blocos3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2 1fr)
+    }
+    
+    #blocos4 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3 1fr);
+    }
+}
