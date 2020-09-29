@@ -24,10 +24,10 @@
 // let idadeMelhorAmiga = prompt("Qual a idade da sua melhor amiga?")
 
 // let maior = Number(idade) > Number(idadeMelhorAmiga)
-// let diferença = Number(idade) - Number(idadeMelhorAmiga)
+// let diferenca = Number(idade) - Number(idadeMelhorAmiga)
 
 // console.log("Sua idade é maior do que a da sua melhor amiga? " + maior)
-// console.log(diferença)
+// console.log(diferenca)
 
 
 // //Exercício 2
