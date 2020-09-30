@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    width: 160px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightcoral;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+form {
+    align-content: center;
+    padding-bottom: 1em;
+}
+
+button {
+    display: block;
+    margin-top: 0.5em;
+    text-align: center;
+    margin: 0.5em auto;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+    }
+
+#main-home {
+    background-color: lightcyan;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}   
+
+article {
+    text-align: center;
+}
+
+.main-detalhes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+video {
+    max-width: 854px;
+    max-height: 480px;
+}
+
+#footer-home {
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    align-items: center;
+    margin-top: 100px;
+    background-color: lightgreen;
+    position: fixed;
+    width: 100vw;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    align-items: center;
+    margin-top: 100px;
+    background-color: lightgreen;
+}
+
+h3 {
+    padding: 1em 0
+}
