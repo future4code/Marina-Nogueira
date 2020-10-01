@@ -65,6 +65,68 @@
 
 // Exercício 7
 
+// let genero = prompt("Qual o gênero do filme?").toLowerCase()
+// let preco = Number(prompt("Qual o preço do ingresso?"))
+
+// if (genero === "fantasia" && preco <= 15) {
+//     console.log("Bom filme!")
+// } else {
+//     console.log("Escolha outro filme :(")
+// }
+
+
+// DESAFIOS
+// Desafio 1
+
+// let genero = prompt("Qual o gênero do filme?").toLowerCase()
+// let preco = Number(prompt("Qual o preço do ingresso?"))
+
+// if (genero === "fantasia" && preco <= 15) {
+//     let snack = prompt("Qual snack você quer comprar?").toLowerCase()
+//     console.log("Bom filme!")
+//     console.log("... com " + snack)
+// } else {
+//     console.log("Escolha outro filme :(")
+// }
+
+
+// Desafio 2
+
+// let nomeCompleto = prompt("Digite seu nome completo.")
+// let tipoJogo = prompt("Que tipo de jogo você quer assistir? Escreva IN para internacional ou DO para doméstico.").toLowerCase()
+// let etapaJogo = prompt("Qual jogo você quer assistir? Escreva SF para semifinal, DT para decisão de terceiro lugar ou FI para final.").toLowerCase()
+// let categoria = Number(prompt("Qual categoria de ingresso você quer comprar? Escreva 1, 2, 3 ou 4."))
+// let quantidade = Number(prompt("Quantos ingressos você quer comprar?"))
+// let valorJogoSF1 = 1320 
+// let valorTotalReais
+// let valorTotalDolares
+
+// if (etapaJogo === "sf") {
+//     if (categoria === 1) {
+//         valorTotalReais = quantidade * valorJogoSF1
+//         if (tipoJogo === in) {
+//             valorTotalDolares = valorTotalReais / 4.1
+//             console.log("---Dados da compra---
+//             Nome: " + nomeCompleto
+//             "Tipo do jogo: " + tipoJogo
+//             "Etapa do jogo: " + etapaJogo
+//             "Categoria: " + categoria
+//             "Quantidade de Ingressos: " + quantidade
+//             "---Valores---"
+//             "Valor do ingresso: R$ " + valorJogoSF1
+//             "Valor total: R$ " + valorTotalDolares)
+//         }
+//     }
+// }
+
+// if (etapaJogo === sf) {
+//     switch (categoria) {
+//         case 1:
+//             valorJogoSF1
+//     }
+// }
+
+
 
 
 
