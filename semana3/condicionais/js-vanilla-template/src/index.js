@@ -92,42 +92,128 @@
 
 // Desafio 2
 
-// let nomeCompleto = prompt("Digite seu nome completo.")
-// let tipoJogo = prompt("Que tipo de jogo você quer assistir? Escreva IN para internacional ou DO para doméstico.").toLowerCase()
-// let etapaJogo = prompt("Qual jogo você quer assistir? Escreva SF para semifinal, DT para decisão de terceiro lugar ou FI para final.").toLowerCase()
-// let categoria = Number(prompt("Qual categoria de ingresso você quer comprar? Escreva 1, 2, 3 ou 4."))
-// let quantidade = Number(prompt("Quantos ingressos você quer comprar?"))
-// let valorJogoSF1 = 1320 
-// let valorTotalReais
-// let valorTotalDolares
+let nomeCliente = prompt("Digite seu nome completo:")
+let tipoJogo = prompt("Escolha um tipo de jogo. Digite DO para jogo doméstico e IN para jogo internacional.").toLowerCase()
+let etapaJogo = prompt("Escolha a etapa do jogo. Digite SF para semifinal, DT para decisão de terceiro lugar e FI para final.").toLowerCase()
+let categoria = Number(prompt("Escolha uma categoria de 1 a 4"))
+let quantidade = Number(prompt("Digite a quantidade de ingressos a ser adquirida."))
+let valorIngresso
+let valorTotal
 
-// if (etapaJogo === "sf") {
-//     if (categoria === 1) {
-//         valorTotalReais = quantidade * valorJogoSF1
-//         if (tipoJogo === in) {
-//             valorTotalDolares = valorTotalReais / 4.1
-//             console.log("---Dados da compra---
-//             Nome: " + nomeCompleto
-//             "Tipo do jogo: " + tipoJogo
-//             "Etapa do jogo: " + etapaJogo
-//             "Categoria: " + categoria
-//             "Quantidade de Ingressos: " + quantidade
-//             "---Valores---"
-//             "Valor do ingresso: R$ " + valorJogoSF1
-//             "Valor total: R$ " + valorTotalDolares)
-//         }
-//     }
-// }
+if (etapaJogo === "sf") {
+    switch (categoria) {
+        case 1:
+            valorIngresso = 1320
+            valorTotal = valorIngresso * quantidade
+            break;
+        case 2:
+            valorIngresso = 880
+            valorTotal = valorIngresso * quantidade
+            break;
+        case 3:
+            valorIngresso = 550
+            valorTotal = valorIngresso * quantidade
+            break;
+        case 4:
+            valorIngresso = 220
+            valorTotal = valorIngresso * quantidade
+            break;
 
-// if (etapaJogo === sf) {
-//     switch (categoria) {
-//         case 1:
-//             valorJogoSF1
-//     }
-// }
+        default:
+            console.log("Categoria não encontrada. Tente novamente.")
+            break;
+    }
+}
 
+if (etapaJogo === "dt") {
+    switch (categoria) {
+        case 1:
+            valorIngresso = 660
+            valorTotal = valorIngresso * quantidade
+            break;
+        case 2:
+            valorIngresso = 440
+            valorTotal = valorIngresso * quantidade
+            break;
+        case 3:
+            valorIngresso = 330
+            valorTotal = valorIngresso * quantidade
+            break;
+        case 4:
+            valorIngresso = 170
+            valorTotal = valorIngresso * quantidade
+            break;
 
+        default:
+            console.log("Categoria não encontrada. Tente novamente.")
+            break;
+    }
+}
 
+if (etapaJogo === "fi") {
+    switch (categoria) {
+        case 1:
+            valorIngresso = 1980
+            valorTotal = valorIngresso * quantidade
+            break;
+        case 2:
+            valorIngresso = 1320
+            valorTotal = valorIngresso * quantidade
+            break;
+        case 3:
+            valorIngresso = 880
+            valorTotal = valorIngresso * quantidade
+            break;
+        case 4:
+            valorIngresso = 330
+            valorTotal = valorIngresso * quantidade
+            break;
 
+        default:
+            console.log("Categoria não encontrada. Tente novamente.")
+            break;
+    }
+}
 
+switch (tipoJogo) {
+    case "do":
+        tipoJogo = "Nacional"
+        valorIngresso = "R$ " + valorIngresso
+        valorTotal = "R$ " + valorTotal
+        break;
+    case "in":
+        tipoJogo = "Internacional"
+        valorIngresso = valorIngresso / 4.1
+        valorTotal = valorTotal / 4.1
+        valorIngresso = "U$ " + valorIngresso
+        valorTotal = "U$ " + valorTotal
+        break;
 
+    default:
+        console.log("Tipo de jogo não encontrado. Tente novamente.")
+        break;
+}
+
+switch (etapaJogo) {
+    case "sf":
+        etapaJogo = "SemiFinal"
+        break;
+    case "dt":
+        etapaJogo = "Decisão do 3º lugar"
+        break;
+    case "fi":
+        etapaJogo = "Final"
+        break;
+    default:
+        console.log("Etapa de jogo não encontrada. Tente novamente.")
+        break;
+}
+
+console.log(`---Dados da compra---
+Tipo do jogo: ${tipoJogo}
+Etapa do jogo: ${etapaJogo}
+Categoria: ${categoria}
+Quantidade de ingressos: ${quantidade}
+---Valores---
+Valor do ingresso: ${valorIngresso}
+Valor Total: ${valorTotal}`)
