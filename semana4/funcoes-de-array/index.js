@@ -50,6 +50,7 @@ function limparFiltros() {
     document.getElementById('tipoFiltro').value = ""
     document.getElementById('valorFiltroMin').value = ""
     document.getElementById('valorFiltroMax').value = ""
+    imprimirDespesas(arrDespesas)
 }
 
 
@@ -92,9 +93,12 @@ function filtrarDespesas(){
 
 
     let despesasFiltradas = arrDespesas.filter((despesa, index, arrDespesas) => {
-        if(tipoFiltro === 'alimentação') {
-
+        if((despesa.tipo === tipoFiltro || tipoFiltro === 'todos') && (despesa.valor >= valorMin) && (despesa.valor <= valorMax)) {
+            return true
+        } else {
+            return false
         }
+
     })
 
 
