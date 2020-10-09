@@ -49,3 +49,24 @@
 // pois o parâmetro "Tesouro Direto" não existe no switch case da função.
 
 //                   ------------//--------------
+
+// EXERCÍCIO 3
+
+// O código se inicia com a criação de 3 arrays:
+// - numeros, que é uma array com elementos definidos;
+// - array1, que é uma array vazia;
+// - array2, que também é uma array vazia.
+// Depois disso, o código abre uma condicional if else em que
+// é criada a variável numero, referente aos elementos da array numeros.
+// A condicional dá que se a variável numero for par, ela deverá
+// ser incluída na array1.
+// Se a variável numero for ímpar, ela dever ser incluída na array2.
+// A condicional se fecha e o código chama três console.log:
+// - o primeiro console.log irá imprimir na tela a string "Quantidade total
+// de números" e o valor da lenght da array numeros;
+//- o segundo console.log irá imprimir na tela o valor da length da array1;
+//- o terceiro console.log irá imprimir na tela o valor da length da array2.
+// O primeiro console.log imprime o valor 14; o segundo console.log
+// imprime o valor 6; e o terceiro console.log imprime o valor 8.
+
+//                   ------------//--------------
