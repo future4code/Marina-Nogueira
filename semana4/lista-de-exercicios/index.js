@@ -45,7 +45,8 @@
 // Após isso, há dois console.log, um para imprimir a variável novoMontante e outro
 // para imprimir a variável segundoMontante.
 // O console.log(novoMontante) imprimiria na tela o valor 165.
-// Já o console.log(segundoMontante) imprimiria undefined e a função resultaria no alert "TIPO DE INVESTIMENTO INFORMADO INCORRETO",
+// Já o console.log(segundoMontante) imprimiria undefined e a função resultaria no alert 
+//"TIPO DE INVESTIMENTO INFORMADO INCORRETO",
 // pois o parâmetro "Tesouro Direto" não existe no switch case.
 
 //                   ------------//--------------
@@ -85,3 +86,11 @@
 // O loop é fechado e dois console.log são chamados: o primeiro que imprime o valor de numero1
 // e o segundo, que imprime o valor de numero2.
 // O console.log(numero1) imprime -10 e o console.log(numero2) imprime 1590.
+
+//---------------------------------------//--------------------------------------------------------------
+
+// EXERCÍCIOS DE LÓGICA DE PROGRAMAÇÃO
+
+// EXERCÍCIO 1
+
+// 
