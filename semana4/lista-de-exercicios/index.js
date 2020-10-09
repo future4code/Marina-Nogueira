@@ -45,8 +45,8 @@
 // Após isso, há dois console.log, um para imprimir a variável novoMontante e outro
 // para imprimir a variável segundoMontante.
 // O console.log(novoMontante) imprimiria na tela o valor 165.
-// Já o console.log(segundoMontante) resultaria no alert "TIPO DE INVESTIMENTO INFORMADO INCORRETO",
-// pois o parâmetro "Tesouro Direto" não existe no switch case da função.
+// Já o console.log(segundoMontante) imprimiria undefined e a função resultaria no alert "TIPO DE INVESTIMENTO INFORMADO INCORRETO",
+// pois o parâmetro "Tesouro Direto" não existe no switch case.
 
 //                   ------------//--------------
 
@@ -56,7 +56,7 @@
 // - numeros, que é uma array com elementos definidos;
 // - array1, que é uma array vazia;
 // - array2, que também é uma array vazia.
-// Depois disso, o código abre uma condicional if else em que
+// Depois disso, o código abre um loop com uma condicional if else em que
 // é criada a variável numero, referente aos elementos da array numeros.
 // A condicional dá que se a variável numero for par, ela deverá
 // ser incluída na array1.
@@ -70,3 +70,18 @@
 // imprime o valor 6; e o terceiro console.log imprime o valor 8.
 
 //                   ------------//--------------
+
+// EXERCÍCIO 4
+
+// O código começa com a criação de uma array de números e de duas variáveis let chamadas
+// numero1 e numero2 respectivamente. O valor de numero1 é Infinity e o valor de numero2 é
+// 0.
+// Depois, é criado o loop for...of, com a variável numero relacionada aos elementos da array
+// numeros.
+// Dentro do loop, há duas condicionais if. A primeira diz que se o valor de numero for menor
+// que o valor de numero1, então numero1 é igual a numero.
+// A segunda condicional diz que se o valor de numero for maior que o valor de numero2,
+// então numero2 é igual a numero.
+// O loop é fechado e dois console.log são chamados: o primeiro que imprime o valor de numero1
+// e o segundo, que imprime o valor de numero2.
+// O console.log(numero1) imprime -10 e o console.log(numero2) imprime 1590.
