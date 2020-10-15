@@ -59,11 +59,7 @@ class Post extends React.Component {
     })
   }
 
-  aoCompartilharPost = (event) => {
-    console.log(`Post compartilhado no ${event.target.id}!`)
-  }
-
-  render() {
+    render() {
     let iconeCurtida
 
     if(this.state.curtido) {

@@ -3,24 +3,29 @@ import './SecaoShare.css'
 
 export class SecaoShare extends Component {
 	state = {
-		valorInputShare: ""
+		mensagem: ""
 	}
 
 	onChangeShare = (event) => {
-		this.setState({ valorInputShare: event.target.value })
+		this.setState({ mensagem: event.target.value })
 	}
 	
+	aoCompartilhar = (event) => {
+		console.log(`Post compartilhado no ${event.target.id} com a mensagem ${this.state.mensagem}!`)
+		this.setState({mensagem: ""})
+	  }
+
 	render() {
 		return <div className={'share-container'}>
 			<input
 				className={'input-share'}
 				placeholder={'Escreva sua mensagem!'}
-				value={this.state.valorInputShare}
+				value={this.state.mensagem}
 				onChange={this.onChangeShare}
 			/>
-			<button id={'Instagram'} onClick={this.props.aoCompartilhar}>Compartilhar no Instagram</button>
-            <button id={'Twitter'} onClick={this.props.aoCompartilhar}>Compartilhar no Twitter</button>
-            <button id={'Facebook'} onClick={this.props.aoCompartilhar}>Compartilhar no Facebook</button>
+			<button id={'Instagram'} onClick={this.aoCompartilhar}>Compartilhar no Instagram</button>
+            <button id={'Twitter'} onClick={this.aoCompartilhar}>Compartilhar no Twitter</button>
+            <button id={'Facebook'} onClick={this.aoCompartilhar}>Compartilhar no Facebook</button>
 	</div>
 	}
 }
