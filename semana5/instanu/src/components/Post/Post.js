@@ -1,5 +1,5 @@
 import React from 'react'
-import './Post.css'
+import styled from "styled-components"
 
 import {IconeComContador} from '../IconeComContador/IconeComContador'
 
@@ -9,8 +9,42 @@ import iconeComentario from '../../img/comment_icon.svg'
 import iconeMarcadorBranco from '../../img/bookmark_border-black-18dp.svg'
 import iconeMarcadorPreto from '../../img/bookmark-black-18dp.svg'
 import iconeShare from '../../img/share-black-18dp.svg'
+
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
+
 import {SecaoShare} from '../SecaoShare/SecaoShare'
+
+const DivPostContainer = styled.div`
+  border: 1px solid gray;
+  width: 300px;
+  margin-bottom: 10px;
+`
+
+const DivPostHeader = styled.div`
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+`
+
+const DivPostFooter = styled.div`
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-between;
+`
+
+const ImgUserPhoto = styled.img`
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+`
+
+const ImgPostPhoto = styled.img`
+  width: 100%;
+`
 
 class Post extends React.Component {
   state = {
@@ -19,7 +53,8 @@ class Post extends React.Component {
     comentando: false,
     numeroComentarios: 0,
     marcado: false,
-    compartilhando: false
+    compartilhando: false,
+    comentarios: ""
   }
 
   onClickCurtida = () => {
@@ -42,8 +77,9 @@ class Post extends React.Component {
 
   aoEnviarComentario = () => {
     this.setState({
-      comentando: false,
-      numeroComentarios: this.state.numeroComentarios + 1
+      // comentando: false,
+      numeroComentarios: this.state.numeroComentarios + 1,
+      comentarios: this.props.valorInputComentario
     })
   }
 
@@ -58,6 +94,13 @@ class Post extends React.Component {
       compartilhando: !this.state.compartilhando
     })
   }
+
+  // aoAdicionarComentario = (event) => {
+  //   this.setState({
+  //     comentarios: this.props.valorContador
+  //   })
+  //   // <p>{this.props.valorInputComentario}</p>
+  // }
 
     render() {
     let iconeCurtida
@@ -88,15 +131,21 @@ class Post extends React.Component {
       componenteShare = <SecaoShare aoCompartilhar={this.aoCompartilharPost} />
     }
 
-    return <div className={'post-container'}>
-      <div className={'post-header'}>
-        <img className={'user-photo'} src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
+    let componenteComentarioPublicado
+
+    if(this.state.comentarios) {
+      componenteComentarioPublicado = <SecaoComentario aoAdicionar={this.aoAdicionarComentario} />
+    }
+
+    return <DivPostContainer>
+      <DivPostHeader>
+        <ImgUserPhoto src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
         <p>{this.props.nomeUsuario}</p>
-      </div>
+      </DivPostHeader>
 
-      <img className={'post-photo'} src={this.props.fotoPost} alt={'Imagem do post'}/>
+      <ImgPostPhoto src={this.props.fotoPost} alt={'Imagem do post'}/>
 
-      <div className={'post-footer'}>
+      <DivPostFooter>
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={this.onClickCurtida}
@@ -118,10 +167,11 @@ class Post extends React.Component {
           icone={iconeShare}
           onClickIcone={this.onClickShare}
         />
-      </div>
+      </DivPostFooter>
       {componenteComentario}
       {componenteShare}
-    </div>
+      {componenteComentarioPublicado}
+    </DivPostContainer>
   }
 }
 
