@@ -1,0 +1,17 @@
+.share-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+.input-share {
+    width: 97%;
+    margin: 3px;
+    height: 20px;
+}
+
+button {
+    display: block;
+    margin: 3px;
+}
