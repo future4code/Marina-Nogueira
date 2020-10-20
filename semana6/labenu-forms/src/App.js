@@ -43,7 +43,11 @@ export class App extends React.Component {
     return (
       <DivEstilizada>
         {this.renderizaEtapa()}
-        <Botao onClick={this.irParaProximaEtapa}>Próxima etapa</Botao>
+        {this.state.etapa !== 4 && 
+          <div>
+            <Botao onClick={this.irParaProximaEtapa}>Próxima etapa</Botao>
+          </div> 
+        }
       </DivEstilizada>
     )
   }
