@@ -10,6 +10,6 @@ export const goToFeedScreen = (history) => {
     history.push("/feed")
 }
 
-// export const goToPostScreen = (history, id) => {
-//     history.push(`/feed/post/${id}`)
-// }
+export const goToPostScreen = (history, id) => {
+    history.push('/feed/post/:id')
+}

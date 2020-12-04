@@ -1,10 +1,14 @@
 import React from 'react';
-import LoginForm from '../components/LoginForm';
+import LoginForm from '../components/Forms/LoginForm';
+import Header from '../components/Header/Header'
+import { useUnprotectedPage } from '../hooks/useUnprotectedPage';
 
 const LoginScreen = () => {
+    useUnprotectedPage()
+    
     return (
         <div>
-            LoginScreen
+            <Header />
             <LoginForm />
         </div>
     )
