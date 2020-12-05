@@ -9,3 +9,13 @@ export const HeaderContainer = styled.div`
     justify-content: center;
     background-color: orange;
 `
+
+export const ButtonFeedHeaderContainer = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+`
+
+export const ButtonFeedPage = styled.button`
+    border-radius: 5px;
+`

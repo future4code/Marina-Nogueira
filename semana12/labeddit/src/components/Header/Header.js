@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
-import { goToPostScreen } from '../../routes/coordinator'
+import { goToFeedScreen } from '../../routes/coordinator'
 
-import { Title, HeaderContainer } from './styles';
+import { Title, HeaderContainer, ButtonFeedPage, ButtonFeedHeaderContainer } from './styles';
 
 const Header = () => {
     const history = useHistory()
@@ -16,14 +16,16 @@ const Header = () => {
                         LabEddit!
                     </Title>
                 </Route>
-                {/* <Route exact path={`/feed/post/${id}`} >
-                    <Title>
-                        LabEddt!
-                    </Title>
-                    <button onClick={() => goToPostScreen(history)} >
-                        Feed
-                    </button>
-                </Route> */}
+                <Route exact path={'/feed/posts/:id'}>
+                    <ButtonFeedHeaderContainer>
+                        <Title>
+                            LabEddit!
+                        </Title>
+                        <ButtonFeedPage onClick={() => goToFeedScreen(history)} >
+                            Feed
+                        </ButtonFeedPage>
+                    </ButtonFeedHeaderContainer>
+                </Route>
             </Switch>
         </HeaderContainer>
     )

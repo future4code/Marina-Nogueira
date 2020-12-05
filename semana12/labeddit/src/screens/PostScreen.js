@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import PostCardList from '../components/PostCardList';
+import Header from '../components/Header/Header'
 import { useProtectPage } from '../hooks/useProtectPage';
+import PostDetails from '../components/PostDetails/PostDetails'
 
 const PostScreen = () => {
     useProtectPage()
@@ -9,7 +9,7 @@ const PostScreen = () => {
     return (
         <div>
             <Header />
-            <PostCardList />
+            <PostDetails />
         </div>
     )
 }
