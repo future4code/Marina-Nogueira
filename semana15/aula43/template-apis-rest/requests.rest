@@ -1,0 +1,19 @@
+### Get All Users
+GET http://localhost:3003/user
+
+### Get Users By Type
+GET http://localhost:3003/user/typesearch?type=admin
+
+### Get Users By Name
+GET http://localhost:3003/user/namesearch?name=dory
+
+### Create User
+PUT  http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "Diana",
+    "email": "diana@g.com",
+    "type": "ADMIN",
+    "age": 32
+}
