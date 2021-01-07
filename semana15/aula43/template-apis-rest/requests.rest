@@ -1,19 +1,42 @@
 ### Get All Users
 GET http://localhost:3003/user
+Content-Type: application/json
 
 ### Get Users By Type
 GET http://localhost:3003/user/typesearch?type=admin
+Content-Type: application/json
 
 ### Get Users By Name
 GET http://localhost:3003/user/namesearch?name=dory
+Content-Type: application/json
 
 ### Create User
 PUT  http://localhost:3003/user/create
 Content-Type: application/json
 
 {
-    "name": "Diana",
-    "email": "diana@g.com",
+    "name": "Marina",
+    "email": "marina@g.com",
     "type": "ADMIN",
-    "age": 32
+    "age": 30
 }
+
+### Change Last User's Name
+PUT http://localhost:3003/user/change
+Content-Type: application/json
+
+{
+    "name": "Marina Azzi Nogueira"
+}
+
+### Change Last User's Name - PATCH
+PATCH http://localhost:3003/user/change
+Content-Type: application/json
+
+{
+    "name": "Mack Quack"
+}
+
+### Delete User By Id
+DELETE http://localhost:3003/user/delete/:id
+Content-Type: application/json

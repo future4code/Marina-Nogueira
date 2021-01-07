@@ -104,10 +104,14 @@ app.get("/user/typesearch", (req: Request, res: Response) => {
         }
 
         const result = myUser;
-        res.status(200).send(result);
+        res
+            .status(200)
+            .send(result);
 
     } catch (error) {
-        res.status(errorCode).send(error.message);
+        res
+            .status(errorCode)
+            .send(error.message);
     }
 })
 
@@ -130,10 +134,14 @@ app.get("/user/namesearch", (req: Request, res: Response) => {
         }
 
         const result = myUser;
-        res.status(200).send(result);
+        res
+            .status(200)
+            .send(result);
 
     } catch (error) {
-        res.status(errorCode).send(error.message);
+        res
+            .status(errorCode)
+            .send(error.message);
     }
 
 });
@@ -153,8 +161,6 @@ app.put("/user/create", (req: Request, res: Response) => {
             type: req.body.type,
             age: req.body.age,
         }
-
-            console.log(reqBody)
 
         if(!reqBody.name || !reqBody.email || !reqBody.type || !reqBody.age){
             errorCode = 422
@@ -183,27 +189,76 @@ app.put("/user/change", (req: Request, res: Response) => {
     let errorCode: number = 400
 
     try {
-        // const reqBody: {id: number, name: string} = {
-        //     id: Number(req.params.id),
-        //     name: req.body.name
-        // }
+        const lastUserIndex: number = Number(users.length - 1)
+        const name: string = req.body.name
 
-        // if(!reqBody.name) {
-        //     errorCode = 422;
-        //     throw new Error("Nome inválido. Preencha corretamente.")
-        // }
-
-        // if(isNaN(Number(req.body.id))) {
-        //     errorCode = 422;
-        //     throw new Error("Id inválido. Tente novamente.")
-
-        // }
-
-        const lastUserIndex = Number(users.length - 1)
-        users[lastUserIndex].name = `${users}`
+        users[lastUserIndex].name = `${name} - ALTERADO`
+        res
+            .status(200)
+            .send({message: "Usuárie atualizade com sucesso!"})
+    } catch (error) {
+        res
+            .status(errorCode)
+            .send({message: error.message})
     }
 })
 
+// Exercício 6
+
+app.patch("/user/change", (req: Request, res: Response) => {
+
+    let errorCode: number = 400
+
+    try {
+        const lastUserIndex: number = Number(users.length - 1)
+        const name: string = req.body.name
+
+        users[lastUserIndex].name = `${name} - REALTERADO`
+        res
+            .status(200)
+            .send({message: "Usuárie atualizade com sucesso!"})
+    } catch (error) {
+        res
+            .status(errorCode)
+            .send({message: error.message})
+    }
+})
+
+// Exercício 7
+
+app.delete("/user/delete/:id", (req: Request, res: Response) => {
+
+    let errorCode: number = 400
+
+    try {
+        const reqBody: {id: number} = {
+            id: Number(req.params.id)
+        }
+
+        if(isNaN(Number(reqBody.id))) {
+            errorCode = 422
+            throw new Error("Id inválido. Tente novamente.")
+        }
+
+        const myUserIndex = users.findIndex(((u: user) => u.id === Number(reqBody.id)))
+
+        if(myUserIndex === -1) {
+            errorCode = 404
+            throw new Error("Usuárie não encontrade. Tente novamente.")
+        }
+
+        users.splice((myUserIndex), 1)
+
+        res
+            .status(200)
+            .send({message: "Usuárie apagado com sucesso!"})
+
+    } catch (error) {
+        res
+            .status(errorCode)
+            .send({message: error.message})
+    }
+})
 
 
 
