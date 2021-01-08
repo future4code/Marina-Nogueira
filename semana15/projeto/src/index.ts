@@ -26,11 +26,7 @@ app.post("/accounts/create", (req: Request, res: Response) => {
             birthDate: req.body.birthDate,
             age: req.body.age,
             balance: 0,
-            statement: [{
-                value: 0,
-                date: 0,
-                description: "teste"
-            }]
+            statement: []
         }
 
         // if(!reqBody.name || !reqBody.cpf || !reqBody.birthDate) {
@@ -39,6 +35,10 @@ app.post("/accounts/create", (req: Request, res: Response) => {
         // }
 
         accounts.push(reqBody)
+
+        res
+            .status(200)
+            .send({message: "Conta criada com sucesso!"})
     } catch (error) {
         res
             .status(errorCode)
