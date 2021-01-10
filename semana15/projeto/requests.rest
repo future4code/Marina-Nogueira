@@ -9,6 +9,5 @@ Content-Type: application/json
 {
     "name": "Laura",
     "cpf": 11000000000,
-    "birthDate": "24/04/2000",
-    "age": 20
+    "birthDateAsString": "24/04/2000"
 }
