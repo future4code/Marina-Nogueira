@@ -1,0 +1,13 @@
+### Get All Accounts
+GET http://localhost:3003/accounts
+Content-Type: application/json
+
+### Create New Account
+POST http://localhost:3003/accounts/create
+Content-Type: application/json
+
+{
+    "name": "Laura",
+    "cpf": 11000000000,
+    "birthDateAsString": "24/04/2000"
+}
