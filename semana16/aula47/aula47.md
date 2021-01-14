@@ -81,3 +81,71 @@ VALUES
 (5, 4),
 (5, 5);
 ~~~
+
+**c)**
+~~~SQL
+INSERT INTO MovieCast
+VALUES
+(7, 2);
+~~~
+
+A mensagem de erro é
+
+>Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`dumont-marina-azzi`.`MovieCast`, CONSTRAINT `MovieCast_ibfk_1` FOREIGN KEY (`movie_id`) REFERENCES `Movie` (`id`))
+
+ou seja, não é possível criar uma relação entre os itens de duas tabelas se um ou mais desses itens não existem.
+
+**d)**
+~~~SQL
+DELETE FROM Actor
+WHERE name = "Fernanda Montenegro";
+~~~
+
+A mensagem de erro é
+
+>Error Code: 1451. Cannot delete or update a parent row: a foreign key constraint fails (`dumont-marina-azzi`.`MovieCast`, CONSTRAINT `MovieCast_ibfk_2` FOREIGN KEY (`actor_id`) REFERENCES `Actor` (`id`))
+
+ou seja, não é possível apagar uma linha se a primary key desse item é referenciada em outra tabela.
+
+
+## Exercício 3
+**a)**
+A query acima relaciona as tabelas Movie e Rating, organizando os dados de acordo com os id's de cada uma delas (Movie.id e Rating.movie_id). O operador _ON_ faz essa condição e mantém os dados exibidos na resposta da query organizados e sem repetições.
+
+**b)**
+~~~SQL
+SELECT Movie.id, title, rate
+FROM Movie
+JOIN Rating ON Movie.id = Rating.movie_id;
+~~~
+
+
+## Exercício 4
+**a)**
+~~~SQL
+SELECT Movie.id, title, rate, comment
+FROM Movie
+LEFT JOIN Rating 
+ON Movie.id = Rating.movie_id;
+~~~
+
+**b)**
+~~~SQL
+SELECT Movie.id, title, actor_id 
+FROM Movie
+RIGHT JOIN MovieCast 
+ON Movie.id = MovieCast.movie_id;
+~~~
+
+**c)**
+~~~SQL
+SELECT AVG(rate), title
+FROM Rating
+LEFT JOIN Movie
+ON Movie.id = Rating.movie_id
+GROUP BY title;
+~~~
+
+
+## Exercício 5
+**a)**
