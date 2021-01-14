@@ -149,3 +149,41 @@ GROUP BY title;
 
 ## Exercício 5
 **a)**
+A query mostrada relaciona os dados de três tabelas diferentes: Movie, MovieCast e Actor.
+Movie e Actor são tabelas independentes, ou seja, elas não tem nenhuma coluna que referencia outra tabela.
+Já a MovieCast é uma tabela construída a partir de referências da Movie (*movie_id*) e da Actor (*actor_id*).
+Assim, são necessários dois JOIN's: um para relacionar Movie e MovieCast e outro para relacionar MovieCast e Actor.
+
+**b)**
+~~~SQL
+SELECT 
+    Movie.id as ID_do_Filme, title as Título_do_Filme, Actor.id as ID_do_Elenco, name as Nome_do_Elenco
+FROM
+    Movie
+        LEFT JOIN
+    MovieCast ON Movie.id = MovieCast.movie_id
+        JOIN
+    Actor ON Actor.id = MovieCast.actor_id;
+~~~
+
+**c)**
+O resultado foi o mesmo.
+
+**d)**
+~~~SQL
+SELECT 
+    Movie.id AS Id_do_Filme,
+    title AS Título_do_Filme,
+    Actor.id AS Id_do_Elenco,
+    Actor.name AS Nome_do_Elenco,
+    Rating.rate AS Nota,
+    Rating.comment AS Comentários
+FROM
+    Movie
+        LEFT JOIN
+    Rating ON Rating.movie_id = Movie.id
+        LEFT JOIN
+    MovieCast ON Movie.id = MovieCast.movie_id
+        JOIN
+    Actor ON Actor.id = MovieCast.actor_id;
+~~~
