@@ -1,9 +1,12 @@
-import express, { Express, Request, Response } from "express";
+import express, { Express } from "express";
 import knex from "knex";
 import cors from "cors";
 import dotenv from "dotenv";
 import { AddressInfo } from "net";
-import { recipe } from "./types/recipe";
+import { getAllUsers } from './endpoints/getAllUsers';
+import { getUserByName } from "./endpoints/getUserByName";
+import { getUserByType } from "./endpoints/getUserByType";
+import { getOrderedUsers } from "./endpoints/getOrderedUsers";
 
 dotenv.config();
 
@@ -22,30 +25,21 @@ const app: Express = express();
 app.use(express.json());
 app.use(cors())
 
-app.get("/recipes/all", async function (
-   req: Request,
-   res: Response
-): Promise<void> {
-   try {
-      const recipes: recipe[] = await connection.raw(`
-         SELECT title, name AS "author", description
-         FROM recipes_aula48
-         JOIN users_aula48 
-         ON user_id = users_aula48.id;
-      `)
 
-      if(!recipes.length){
-         res.statusCode = 404
-         throw new Error("No recipes found")
-      }
+// Chamadas de endpoint
 
-      res.status(200).send(recipes)
-      
-   } catch (error) {
-      console.log(error)
-      res.send(error.message || error.sqlMessage)
-   }
-});
+app.get('/users/all', getAllUsers)
+
+// Exercício 1a)
+app.get('/users/search', getUserByName)
+
+
+// Exercício 1b)
+app.get('/users/search/:type', getUserByType)
+
+// Exercício 2)
+app.get('/users/order', getOrderedUsers)
+
 
 const server = app.listen(process.env.PORT || 3003, () => {
    if (server) {
