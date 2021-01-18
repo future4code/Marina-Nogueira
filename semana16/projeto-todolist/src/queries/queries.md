@@ -36,3 +36,19 @@ VALUES
 -- ("004", "brincar de lutinha", "5 minutinhos de pancadaria sem perder a amizade", "2021-02-15", "a")
 ;
 ~~~
+
+~~~SQL
+ALTER TABLE Task
+ADD status VARCHAR(255) NOT NULL DEFAULT "to_do";
+~~~
+
+~~~SQL
+CREATE TABLE ResponsibleUserTaskRelation (
+    task_id VARCHAR(255),
+    responsibleUserId VARCHAR(255),
+    FOREIGN KEY (task_id)
+        REFERENCES Task (id),
+    FOREIGN KEY (responsibleUserId)
+        REFERENCES User (id)
+);
+~~~

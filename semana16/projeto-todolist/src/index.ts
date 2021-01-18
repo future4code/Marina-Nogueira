@@ -10,8 +10,7 @@ import endpoints from './routes/endpoints'
 
 const app: Express = express();
 
-app.use("/user", endpoints);
-
+app.use("/", endpoints);
 
 
 // Server Settings
