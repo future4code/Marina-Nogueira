@@ -1,0 +1,15 @@
+### GET All Users
+GET http://localhost:3003/users/all
+Content-Type: application/json
+
+### GET User By Name
+GET http://localhost:3003/users/search?name=ma
+Content-Type: application/json
+
+### GET User By Type
+GET http://localhost:3003/users/search/cx
+Content-Type: application/json
+
+### GET Ordered Users
+GET http://localhost:3003/users/order?orderBy=type
+Content-Type: application/json
